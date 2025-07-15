@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 # Import the core logic from your app.py file
-from app import (
+from main import (
     MarketingAnalyticsOrchestrator,
     ReportGenerator,
     load_analysis_mappings_from_excel,
