@@ -6,7 +6,7 @@
     "codespaces": {
       "openFiles": [
         "README.md",
-        "interface.py"
+        "app.py"
       ]
     },
     "vscode": {
@@ -18,12 +18,12 @@
   },
 
   // This command runs our setup script after the container is created.
-  // This is much cleaner than a long, single-line command.
   "postCreateCommand": ".devcontainer/setup.sh",
 
   // Runs after you connect, starting the Streamlit app automatically.
+  // Using the robust "python -m" command to avoid PATH issues.
   "postAttachCommand": {
-    "server": "streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false"
+    "server": "python3 -m streamlit run app.py --server.enableCORS false --server.enableXsrfProtection false"
   },
 
   // Configures the port forwarding for the Streamlit app.
