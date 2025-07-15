@@ -18,7 +18,9 @@ sudo apt-get update
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev
 
 echo "Installing Python packages from requirements.txt globally..."
-# Use sudo to install packages globally, making executables available system-wide.
+# This is the corrected line.
+# We use 'sudo' to install the packages into the system-wide site-packages directory,
+# making them available to the main '/usr/local/bin/python3' interpreter.
 sudo pip3 install -r requirements.txt
 
 echo "✅ Environment setup complete!"
