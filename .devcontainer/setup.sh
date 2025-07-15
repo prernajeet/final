@@ -17,7 +17,8 @@ sudo apt-get update
 # The 'ACCEPT_EULA' part is crucial for a non-interactive install
 sudo ACCEPT_EULA=Y apt-get install -y msodbcsql18 unixodbc-dev
 
-echo "Installing Python packages from requirements.txt..."
-pip install --user -r requirements.txt
+echo "Installing Python packages from requirements.txt globally..."
+# Use sudo to install packages globally, making executables available system-wide.
+sudo pip3 install -r requirements.txt
 
 echo "✅ Environment setup complete!"
