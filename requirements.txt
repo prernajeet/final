@@ -18,3 +18,4 @@ mlxtend
 pydantic
 openpyxl
 faiss-cpu
+pysqlite3-binary
